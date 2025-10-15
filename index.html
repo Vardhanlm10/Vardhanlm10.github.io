@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YOUR NAME — Portfolio</title>
+  <meta name="description" content="Portfolio, research, projects, and publications of YOUR NAME." />
+  <meta property="og:title" content="YOUR NAME — Portfolio" />
+  <meta property="og:description" content="Portfolio, research, projects, and publications of YOUR NAME." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://USERNAME.github.io/" />
+  <meta property="og:image" content="https://USERNAME.github.io/og-image.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0c10; --card:#111318; --text:#e8e8ea; --muted:#b8b8bf; --brand:#6ae3ff; --link:#8bd3ff;
+      --shadow: 0 8px 28px rgba(0,0,0,.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --card:#f6f7fb; --text:#1c1d22; --muted:#4b4f5c; --brand:#2563eb; --link:#1d4ed8; }
+    }
+    *{box-sizing:border-box}
+    html,body{padding:0;margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
+    body{background:var(--bg); color:var(--text); line-height:1.6}
+    .container{max-width:1000px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:24px 0}
+    .brand{display:flex;align-items:center;gap:12px; text-decoration:none; color:var(--text)}
+    .avatar{width:56px;height:56px;border-radius:50%; background:linear-gradient(135deg,var(--brand),#a78bfa); display:grid; place-items:center; color:#000; font-weight:700}
+    nav a{color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600}
+    nav a:hover{color:var(--text)}
+    .btn{display:inline-block; background:var(--brand); color:#061018; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:700; box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent; color:var(--link); border:1px solid rgba(255,255,255,.15)}
+    .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center; padding:24px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.08); border-radius:20px}
+    .hero h1{font-size:42px; line-height:1.15; margin:0 0 12px}
+    .hero p{color:var(--muted); margin:0 0 16px}
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:20px; box-shadow:var(--shadow)}
+    section{margin:40px 0}
+    h2{font-size:22px; margin:0 0 12px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+    .list{padding:0; margin:0; list-style:none}
+    .list li{padding:14px; border-radius:14px; background:rgba(255,255,255,.03); border:1px dashed rgba(255,255,255,.09); margin:10px 0}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; color:var(--muted)}
+    footer{margin:40px 0; display:flex; align-items:center; justify-content:space-between; color:var(--muted)}
+    .social a{margin-right:12px; color:var(--muted); text-decoration:none}
+    .social a:hover{color:var(--text)}
+    .tag{display:inline-block; font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--muted)}
+    .row{display:flex; gap:10px; flex-wrap:wrap}
+    .nowrap{white-space:nowrap}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .theme{cursor:pointer; padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.1)}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} nav{display:none} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="avatar" aria-hidden="true">VP</div>
+        <div>
+          <div style="font-weight:800; font-size:18px">YOUR NAME</div>
+          <div class="mono">Researcher • ML • ASU</div>
+        </div>
+      </a>
+      <div class="row">
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="themeBtn" class="theme" title="Toggle theme">🌓<span class="sr-only">Toggle theme</span></button>
+        <a class="btn" href="YOUR_CV_LINK.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </header>
+
+    <section class="hero card">
+      <div>
+        <div class="kicker">Machine Learning • Reasoning • HAT</div>
+        <h1>
+          Hi, I’m YOUR NAME.
+        </h1>
+        <p>
+          I’m a graduate student at <strong>Arizona State University</strong> working with <strong>Prof. Subbarao Kambhampati</strong>.
+          My research explores <em>reasoning traces</em>, <em>multi‑agent RL</em>, and <em>human‑AI teaming</em>.
+        </p>
+        <div class="row">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="card" style="background:conic-gradient(from 180deg at 50% 50%, rgba(106,227,255,.15), rgba(167,139,250,.15), rgba(106,227,255,.15)); border-style: dashed;">
+        <div class="kicker">Quick facts</div>
+        <ul class="list">
+          <li>🎓 MS→PhD track @ ASU (SCAI)</li>
+          <li>🧠 Research: LRMs, GRPO, Overcooked HAT/ZSC</li>
+          <li>📄 Recent preprint: <span class="nowrap">“Beyond semantics...” (2025)</span></li>
+          <li>🛠️ Python, PyTorch, JAX, CUDA, AWS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I design models and evaluations for <strong>reasoning‑centric AI</strong>.
+          I enjoy building reproducible pipelines and clear experimental setups.
+        </p>
+        <p class="mono">Update this section with your bio: your interests, what you’re working on now, and what you’re looking for.</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research highlights</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="row" style="justify-content:space-between; align-items:center; margin-bottom:8px">
+            <strong>Reasonless Intermediate Tokens</strong>
+            <span class="tag">2025</span>
+          </div>
+          <p>We probe whether intermediate tokens carry semantics or merely act as <em>scaffolding</em> for optimization.
+          Robust out‑of‑distribution behavior appears even with corrupted traces.</p>
+          <a class="btn ghost" href="https://arxiv.org/abs/2505.13775" target="_blank" rel="noopener">Preprint</a>
+        </article>
+        <article class="card">
+          <div class="row" style="justify-content:space-between; align-items:center; margin-bottom:8px">
+            <strong>Human‑AI Teaming (Overcooked)</strong>
+            <span class="tag">2025</span>
+          </div>
+          <p>We introduce interdependence metrics for cooperation and analyze MARL agents with human partners in Zero‑Shot Cooperation settings.</p>
+          <a class="btn ghost" href="#" aria-disabled="true">Paper (soon)</a>
+        </article>
+        <article class="card">
+          <div class="row" style="justify-content:space-between; align-items:center; margin-bottom:8px">
+            <strong>RITA → Epitope‑TCR Generation</strong>
+            <span class="tag">2024</span>
+          </div>
+          <p>Fine‑tuned a protein LM to generate candidate TCR sequences for unseen epitopes, yielding high in‑silico binding scores.</p>
+          <a class="btn ghost" href="#">Details</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="kicker">Inference‑time Scaling</div>
+          <h3 style="margin-top:6px">Strategic look‑ahead rollouts</h3>
+          <p>Built a rollout‑based lookahead method for reasoning tasks (Game of 24), boosting GPT‑4o‑mini from 21% → 70%.</p>
+          <div class="row">
+            <span class="tag">Python</span>
+            <span class="tag">LLM</span>
+            <span class="tag">Search</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="kicker">Planning</div>
+          <h3 style="margin-top:6px">Searchformer datasets</h3>
+          <p>Generated large‑scale A* trace datasets on mazes (Wilson, Kruskal, DFS, Drunkard’s Walk) for plan/trace validity studies.</p>
+          <div class="row">
+            <span class="tag">Python</span>
+            <span class="tag">A*</span>
+            <span class="tag">Datasets</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="kicker">Systems</div>
+          <h3 style="margin-top:6px">GPU training pipelines</h3>
+          <p>Multi‑GPU DDP training, W&B logging, robust evaluation scripts, and reproducible seeds across runs.</p>
+          <div class="row">
+            <span class="tag">PyTorch</span>
+            <span class="tag">DDP</span>
+            <span class="tag">MLOps</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="list">
+        <li>
+          <strong>Kaya Stechly*, Karthik Valmeekam*, <u>YOUR NAME*</u>, Atharva Gundawar*, Subbarao Kambhampati.</strong>
+          <em>Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens.</em>
+          arXiv:2505.13775 (2025). <span class="tag">Equal contribution</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>If you’d like to collaborate or chat, email me at <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>.</p>
+        <div class="social" aria-label="Social links">
+          <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=SCHOLAR_ID" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="/rss.xml">RSS</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> YOUR NAME. All rights reserved.</div>
+      <div class="mono">Built with GitHub Pages · <a href="https://github.com/USERNAME/USERNAME.github.io" style="color:var(--muted)">Source</a></div>
+    </footer>
+  </div>
+
+  <script>
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+    const btn = document.getElementById('themeBtn');
+    const key = 'theme-preference';
+    const getPref = () => localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const setTheme = t => document.documentElement.dataset.theme = t;
+    setTheme(getPref());
+    btn.addEventListener('click', () => {
+      const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark';
+      setTheme(next); localStorage.setItem(key, next);
+    });
+  </script>
+</body>
+</html>
