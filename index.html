@@ -3,53 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vardhan Palod — Portfolio</title>
-  <meta name="description" content="Portfolio, research, projects, and publications of Vardhan Palod." />
-  <meta property="og:title" content="Vardhan Palod — Portfolio" />
-  <meta property="og:description" content="Portfolio, research, projects, and publications of Vardhan Palod." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://USERNAME.github.io/" />
-  <meta property="og:image" content="https://USERNAME.github.io/og-image.png" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+  <title>Vardhan Palod — Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio of Vardhan Palod — PhD student at Arizona State University. Research on LLM reasoning, intermediate tokens, and Human‑AI teaming." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📘</text></svg>">
   <style>
     :root{
-      --bg:#0b0c10; --card:#111318; --text:#e8e8ea; --muted:#b8b8bf; --brand:#6ae3ff; --link:#8bd3ff;
-      --shadow: 0 8px 28px rgba(0,0,0,.35);
+      --bg:#0b0c10; --panel:#0f1218; --card:#121620; --text:#eaeaf1; --muted:#b7bcc9; --line:rgba(255,255,255,.1);
+      --brand:#6ae3ff; --accent:#a78bfa; --link:#8bd3ff; --chip:rgba(255,255,255,.06);
+      --shadow: 0 12px 36px rgba(0,0,0,.45);
     }
     @media (prefers-color-scheme: light){
-      :root{ --bg:#ffffff; --card:#f6f7fb; --text:#1c1d22; --muted:#4b4f5c; --brand:#2563eb; --link:#1d4ed8; }
+      :root{ --bg:#ffffff; --panel:#f7f8fb; --card:#ffffff; --text:#111827; --muted:#4b5563; --line:rgba(17,24,39,.1); --brand:#2563eb; --accent:#7c3aed; --link:#1d4ed8; --chip:#f3f4f6 }
     }
     *{box-sizing:border-box}
-    html,body{padding:0;margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
-    body{background:var(--bg); color:var(--text); line-height:1.6}
-    .container{max-width:1000px; margin:0 auto; padding:24px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:24px 0}
-    .brand{display:flex;align-items:center;gap:12px; text-decoration:none; color:var(--text)}
-    .avatar{width:56px;height:56px;border-radius:50%; background:linear-gradient(135deg,var(--brand),#a78bfa); display:grid; place-items:center; color:#000; font-weight:700}
-    nav a{color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600}
+    html,body{margin:0; padding:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+    body{background:linear-gradient(180deg,var(--panel),var(--bg)); color:var(--text)}
+    .container{max-width:1000px; margin:0 auto; padding:28px 20px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0 24px}
+    .brand{display:flex; gap:14px; align-items:center; text-decoration:none; color:inherit}
+    .avatar{width:56px; height:56px; border-radius:14px; background:linear-gradient(135deg,var(--brand),var(--accent)); display:grid; place-items:center; color:#0b0c10; font-weight:800}
+    nav a{margin-left:16px; color:var(--muted); text-decoration:none; font-weight:600}
     nav a:hover{color:var(--text)}
-    .btn{display:inline-block; background:var(--brand); color:#061018; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:700; box-shadow:var(--shadow)}
-    .btn.ghost{background:transparent; color:var(--link); border:1px solid rgba(255,255,255,.15)}
-    .hero{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center; padding:24px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.08); border-radius:20px}
-    .hero h1{font-size:42px; line-height:1.15; margin:0 0 12px}
-    .hero p{color:var(--muted); margin:0 0 16px}
-    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:20px; box-shadow:var(--shadow)}
-    section{margin:40px 0}
-    h2{font-size:22px; margin:0 0 12px}
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .btn{display:inline-block; background:var(--brand); color:#07131a; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:800; box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent; color:var(--link); border:1px solid var(--line)}
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; background:linear-gradient(180deg, rgba(255,255,255,.06), transparent); border:1px solid var(--line); border-radius:20px; padding:24px}
+    h1{font-size:42px; line-height:1.1; margin:0 0 8px}
     .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
-    .list{padding:0; margin:0; list-style:none}
-    .list li{padding:14px; border-radius:14px; background:rgba(255,255,255,.03); border:1px dashed rgba(255,255,255,.09); margin:10px 0}
+    p{line-height:1.7}
+    section{margin:40px 0}
+    h2{font-size:24px; margin:0 0 12px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px}
+    .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+    .list{list-style:none; padding:0; margin:0}
+    .list li{padding:14px; background:var(--chip); border:1px dashed var(--line); border-radius:14px; margin:10px 0}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; color:var(--muted)}
-    footer{margin:40px 0; display:flex; align-items:center; justify-content:space-between; color:var(--muted)}
-    .social a{margin-right:12px; color:var(--muted); text-decoration:none}
-    .social a:hover{color:var(--text)}
-    .tag{display:inline-block; font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--muted)}
-    .row{display:flex; gap:10px; flex-wrap:wrap}
-    .nowrap{white-space:nowrap}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .theme{cursor:pointer; padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.1)}
-    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} nav{display:none} }
+    .edu{display:grid; grid-template-columns: 1.2fr .8fr; gap:10px}
+    .edu .right{text-align:right; color:var(--muted)}
+    .pub{margin:10px 0; padding:14px; border-radius:14px; border:1px solid var(--line)}
+    .chips .chip{display:inline-block; padding:4px 8px; border-radius:999px; background:var(--chip); border:1px solid var(--line); font-size:11px; color:var(--muted)}
+    footer{margin:50px 0; color:var(--muted); display:flex; align-items:center; justify-content:space-between}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .edu{grid-template-columns:1fr} .edu .right{text-align:left} nav{display:none} }
   </style>
 </head>
 <body>
@@ -58,169 +52,202 @@
       <a class="brand" href="#">
         <div class="avatar" aria-hidden="true">VP</div>
         <div>
-          <div style="font-weight:800; font-size:18px">Vardhan Palod</div>
-          <div class="mono">Researcher • ML • ASU</div>
+          <div style="font-weight:900; font-size:18px">Vardhan Palod</div>
+          <div class="mono">PhD Student • CS @ ASU</div>
         </div>
       </a>
       <div class="row">
         <nav aria-label="Primary">
           <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Research</a>
           <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button id="themeBtn" class="theme" title="Toggle theme">🌓<span class="sr-only">Toggle theme</span></button>
-        <a class="btn" href="YOUR_CV_LINK.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
     </header>
 
-    <section class="hero card">
+    <section class="hero card" id="about">
       <div>
-        <div class="kicker">Large Language Models • Reasoning • Human-AI Teaming</div>
-        <h1>
-          Hi, I’m Vardhan.
-        </h1>
+        <div class="kicker">Research Objective</div>
+        <h1>Language models, reasoning, and human‑AI teaming</h1>
         <p>
-          I’m a graduate student at <strong>Arizona State University</strong> working with <strong>Prof. Subbarao Kambhampati</strong>.
-          My research explores <em>reasoning traces</em>, <em>multi‑agent RL</em>, and <em>human‑AI teaming</em>.
+          My research studies the interplay between <strong>large language models (LLMs)</strong> and <strong>reasoning</strong>, with a focus on the role of <em>intermediate tokens</em> in performance and behavior. I also design robust, scalable frameworks for <strong>Human‑AI collaboration</strong>, complementing modern LLMs with principled planners from the AI Planning community.
         </p>
-        <div class="row">
-          <a class="btn" href="#projects">See my work</a>
-          <a class="btn ghost" href="#contact">Get in touch</a>
+        <div class="row chips">
+          <span class="chip">LLMs & Reasoning</span>
+          <span class="chip">Intermediate Tokens</span>
+          <span class="chip">Human‑AI Teaming</span>
+          <span class="chip">AI Planning</span>
         </div>
       </div>
-      <!-- <div class="card" style="background:conic-gradient(from 180deg at 50% 50%, rgba(106,227,255,.15), rgba(167,139,250,.15), rgba(106,227,255,.15)); border-style: dashed;">
-        <div class="kicker">Quick facts</div>
-        <ul class="list">
-          <li>🎓 MS→PhD track @ ASU (SCAI)</li>
-          <li>🧠 Research: LRMs, GRPO, Overcooked HAT/ZSC</li>
-          <li>📄 Recent preprint: <span class="nowrap">“Beyond semantics...” (2025)</span></li>
-          <li>🛠️ Python, PyTorch, JAX, CUDA, AWS</li>
-        </ul>
-      </div> -->
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
       <div class="card">
+        <div class="kicker">Contact</div>
         <p>
-          I design models and evaluations for <strong>reasoning‑centric AI</strong>.
-          I enjoy building reproducible pipelines and clear experimental setups.
+          <a href="mailto:vpalod@asu.edu">vpalod@asu.edu</a><br/>
+          <a href="https://linkedin.com/in/vardhan-palod/" target="_blank" rel="noopener">LinkedIn</a> ·
+          <a href="https://github.com/vardhanlm10" target="_blank" rel="noopener">GitHub</a>
         </p>
-        <p class="mono">Update this section with your bio: your interests, what you’re working on now, and what you’re looking for.</p>
+        <p class="mono">Tempe, AZ · +1 (623) 297‑4946</p>
       </div>
     </section>
 
-    <section id="research">
-      <h2>Research highlights</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="row" style="justify-content:space-between; align-items:center; margin-bottom:8px">
-            <strong>Reasonless Intermediate Tokens</strong>
-            <span class="tag">2025</span>
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <div class="edu">
+          <div>
+            <strong>Arizona State University</strong> — PhD in Computer Science
+            <div class="mono">Advisor: Prof. Subbarao Kambhampati · GPA: 4.0/4.0</div>
           </div>
-          <p>We probe whether intermediate tokens carry semantics or merely act as <em>scaffolding</em> for optimization.
-          Robust out‑of‑distribution behavior appears even with corrupted traces.</p>
-          <a class="btn ghost" href="https://arxiv.org/abs/2505.13775" target="_blank" rel="noopener">Preprint</a>
-        </article>
-        <article class="card">
-          <div class="row" style="justify-content:space-between; align-items:center; margin-bottom:8px">
-            <strong>Human‑AI Teaming (Overcooked)</strong>
-            <span class="tag">2025</span>
+          <div class="right">Aug 2025 – May 2030 (Expected)</div>
+        </div>
+        <hr style="border:none; border-top:1px solid var(--line); margin:12px 0"/>
+        <div class="edu">
+          <div>
+            <strong>Arizona State University</strong> — M.S. in Computer Science
+            <div class="mono">Advisor: Prof. Subbarao Kambhampati · Converted to PhD · GPA: 4.0/4.0</div>
           </div>
-          <p>We introduce interdependence metrics for cooperation and analyze MARL agents with human partners in Zero‑Shot Cooperation settings.</p>
-          <a class="btn ghost" href="#" aria-disabled="true">Paper (soon)</a>
-        </article>
-        <article class="card">
-          <div class="row" style="justify-content:space-between; align-items:center; margin-bottom:8px">
-            <strong>RITA → Epitope‑TCR Generation</strong>
-            <span class="tag">2024</span>
+          <div class="right">Aug 2024 – May 2025</div>
+        </div>
+        <hr style="border:none; border-top:1px solid var(--line); margin:12px 0"/>
+        <div class="edu">
+          <div>
+            <strong>BITS Pilani, K.K. Birla Goa Campus</strong> — B.E. in Computer Science (Minor: Data Science)
+            <div class="mono">CGPA: 8.56/10</div>
           </div>
-          <p>Fine‑tuned a protein LM to generate candidate TCR sequences for unseen epitopes, yielding high in‑silico binding scores.</p>
-          <a class="btn ghost" href="#">Details</a>
-        </article>
+          <div class="right">Aug 2020 – May 2024</div>
+        </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Selected projects</h2>
+    <section id="experience">
+      <h2>Research Experience</h2>
       <div class="grid">
         <article class="card">
-          <div class="kicker">Inference‑time Scaling</div>
-          <h3 style="margin-top:6px">Strategic look‑ahead rollouts</h3>
-          <p>Built a rollout‑based lookahead method for reasoning tasks (Game of 24), boosting GPT‑4o‑mini from 21% → 70%.</p>
-          <div class="row">
-            <span class="tag">Python</span>
-            <span class="tag">LLM</span>
-            <span class="tag">Search</span>
+          <div class="row" style="justify-content:space-between">
+            <strong>Graduate Research Associate</strong>
+            <span class="mono">Jan 2025 – Present</span>
           </div>
+          <div class="mono">School of Computing & AI, Arizona State University · Mentor: Prof. Subbarao Kambhampati</div>
+          <ul>
+            <li>Investigating reasoning abilities via fine‑tuning and RL‑based training of LLMs.</li>
+            <li>Developing constructive applications where LLMs complement robust planners from AI Planning.</li>
+          </ul>
         </article>
         <article class="card">
-          <div class="kicker">Planning</div>
-          <h3 style="margin-top:6px">Searchformer datasets</h3>
-          <p>Generated large‑scale A* trace datasets on mazes (Wilson, Kruskal, DFS, Drunkard’s Walk) for plan/trace validity studies.</p>
-          <div class="row">
-            <span class="tag">Python</span>
-            <span class="tag">A*</span>
-            <span class="tag">Datasets</span>
+          <div class="row" style="justify-content:space-between">
+            <strong>Master’s Opportunity for Research in Engineering (MORE)</strong>
+            <span class="mono">Jan 2025 – May 2025</span>
           </div>
-        </article>
-        <article class="card">
-          <div class="kicker">Systems</div>
-          <h3 style="margin-top:6px">GPU training pipelines</h3>
-          <p>Multi‑GPU DDP training, W&B logging, robust evaluation scripts, and reproducible seeds across runs.</p>
-          <div class="row">
-            <span class="tag">PyTorch</span>
-            <span class="tag">DDP</span>
-            <span class="tag">MLOps</span>
-          </div>
+          <div class="mono">Arizona State University · Mentor: Dr. Heewook Lee</div>
+          <ul>
+            <li>Fine‑tuned <strong>RITA</strong> (protein LM) to generate candidate TCR sequences for epitopes with no known binders.</li>
+            <li>Produced high‑quality TCRs with strong predicted binding affinity, indicating potential for novel immunotherapies.</li>
+          </ul>
         </article>
       </div>
     </section>
 
     <section id="publications">
-      <h2>Publications</h2>
-      <ul class="list">
-        <li>
+      <h2>Selected Publications</h2>
+      <div class="card">
+        <div class="pub">
           <strong>Kaya Stechly*, Karthik Valmeekam*, <u>Vardhan Palod*</u>, Atharva Gundawar*, Subbarao Kambhampati.</strong>
-          <em>Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens.</em>
-          arXiv:2505.13775 (2025). <span class="tag">Equal contribution</span>
-        </li>
-      </ul>
+          <div><em>Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens.</em></div>
+          <div class="mono">NeurIPS 2025, Foundations of Reasoning in Language Models Workshop. <span class="chips"><span class="chip">Equal contribution</span></span></div>
+        </div>
+        <div class="pub">
+          <strong>Vardhan Palod, Karthik Valmeekam, Kaya Stechly, Subbarao Kambhampati.</strong>
+          <div><em>Performative Thinking? The Brittle Correlation Between CoT Length and Problem Complexity.</em></div>
+          <div class="mono">NeurIPS 2025, Workshop on Efficient Reasoning.</div>
+        </div>
+        <div class="pub">
+          <strong>Upasana Biswas, Vardhan Palod, Siddhant Bhambri, Subbarao Kambhampati.</strong>
+          <div><em>Who is Helping Whom? Analyzing Inter‑dependencies to Evaluate Cooperation in Human‑AI Teaming.</em></div>
+          <div class="mono">Second Coordination & Cooperation in Multi‑Agent Reinforcement Learning Workshop.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Notable Research Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="kicker">Inference‑time Scaling</div>
+          <h3 style="margin-top:6px">Rollout‑based strategic lookahead for reasoning</h3>
+          <p>Designed a rollout method that performs strategic lookahead before committing to next actions in reasoning tasks (Game of 24), achieving <strong>70% accuracy</strong> versus a <strong>21% baseline</strong> with GPT‑4o‑mini.</p>
+          <div class="row chips"><span class="chip">Python</span><span class="chip">LLM</span><span class="chip">Search</span></div>
+        </article>
+        <article class="card">
+          <div class="kicker">World Models for RL</div>
+          <h3 style="margin-top:6px">Leveraging LLMs to accelerate RL in Gridworld</h3>
+          <p>Used Llama 3.1 to synthesize state‑action trajectories, enabling model‑free RL agents to converge up to <strong>50% faster</strong> and reduce unsafe exploration by up to <strong>75%</strong> relative to direct training in‑env.</p>
+          <div class="row chips"><span class="chip">Llama 3.1</span><span class="chip">RL</span><span class="chip">Simulation</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Strengths</h2>
+      <div class="card">
+        <div class="row chips" style="margin-bottom:10px">
+          <span class="chip">Python</span>
+          <span class="chip">C/C++</span>
+          <span class="chip">Java</span>
+          <span class="chip">PDDL</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">HuggingFace</span>
+          <span class="chip">VERL (GRPO, FSDP SFT)</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Scikit‑learn</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Pandas</span>
+        </div>
+        <p class="mono">Always happy to share code and experimental setups upon request.</p>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p>If you’d like to collaborate or chat, email me at <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>.</p>
-        <div class="social" aria-label="Social links">
-          <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=SCHOLAR_ID" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="/rss.xml">RSS</a>
-        </div>
+        <p><strong>Email:</strong> <a href="mailto:vpalod@asu.edu">vpalod@asu.edu</a><br/>
+        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vardhan-palod/" target="_blank" rel="noopener">linkedin.com/in/vardhan-palod/</a><br/>
+        <strong>GitHub:</strong> <a href="https://github.com/vardhanlm10" target="_blank" rel="noopener">github.com/vardhanlm10</a><br/>
+        <strong>Location:</strong> Tempe, AZ · <strong>Phone:</strong> +1 (623) 297‑4946</p>
       </div>
     </section>
 
     <footer>
-      <div>© <span id="year"></span> Vardhan Palod. All rights reserved.</div>
-      <div class="mono">Built with GitHub Pages · <a href="https://github.com/USERNAME/USERNAME.github.io" style="color:var(--muted)">Source</a></div>
+      <div>© <span id="year"></span> Vardhan Palod</div>
+      <div class="mono">Built with GitHub Pages</div>
     </footer>
   </div>
 
   <script>
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
-    const btn = document.getElementById('themeBtn');
-    const key = 'theme-preference';
-    const getPref = () => localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    const setTheme = t => document.documentElement.dataset.theme = t;
-    setTheme(getPref());
-    btn.addEventListener('click', () => {
-      const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark';
-      setTheme(next); localStorage.setItem(key, next);
-    });
+  </script>
+
+  <!-- Structured data for richer previews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vardhan Palod",
+    "jobTitle": "PhD Student",
+    "affiliation": {"@type":"CollegeOrUniversity","name":"Arizona State University"},
+    "email": "mailto:vpalod@asu.edu",
+    "url": "https://github.com/vardhanlm10",
+    "sameAs": [
+      "https://linkedin.com/in/vardhan-palod/",
+      "https://github.com/vardhanlm10"
+    ]
+  }
   </script>
 </body>
 </html>
