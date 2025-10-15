@@ -18,14 +18,17 @@
     *{box-sizing:border-box}
     html,body{margin:0; padding:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
     body{background:linear-gradient(180deg,var(--panel),var(--bg)); color:var(--text)}
-    .container{max-width:1000px; margin:0 auto; padding:28px 20px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0 24px}
+    .container{max-width:1100px; margin:0 auto; padding:28px 20px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0 24px; flex-wrap:wrap}
     .brand{display:flex; gap:14px; align-items:center; text-decoration:none; color:inherit}
-    .avatar{width:56px; height:56px; border-radius:14px; background:linear-gradient(135deg,var(--brand),var(--accent)); display:grid; place-items:center; color:#0b0c10; font-weight:800}
-    nav a{margin-left:16px; color:var(--muted); text-decoration:none; font-weight:600}
+    .avatar{width:60px; height:60px; border-radius:50%; overflow:hidden; background:var(--chip);}
+    .avatar img{width:100%; height:100%; object-fit:cover; border-radius:50%;}
+    nav{display:flex; align-items:center; flex-wrap:wrap; gap:16px;}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600; padding:4px 8px;}
     nav a:hover{color:var(--text)}
-    .btn{display:inline-block; background:var(--brand); color:#07131a; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:800; box-shadow:var(--shadow)}
-    .btn.ghost{background:transparent; color:var(--link); border:1px solid var(--line)}
+    .btn{background:var(--brand); color:#07131a; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:700; box-shadow:var(--shadow)}
+    .btn:hover{opacity:0.9}
+    .header-right{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
     .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; background:linear-gradient(180deg, rgba(255,255,255,.06), transparent); border:1px solid var(--line); border-radius:20px; padding:24px}
     h1{font-size:42px; line-height:1.1; margin:0 0 8px}
     .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
@@ -37,26 +40,26 @@
     .list{list-style:none; padding:0; margin:0}
     .list li{padding:14px; background:var(--chip); border:1px dashed var(--line); border-radius:14px; margin:10px 0}
     .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; color:var(--muted)}
+    .chips .chip{display:inline-block; padding:4px 8px; border-radius:999px; background:var(--chip); border:1px solid var(--line); font-size:11px; color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size:12px; color:var(--muted)}
     .edu{display:grid; grid-template-columns: 1.2fr .8fr; gap:10px}
     .edu .right{text-align:right; color:var(--muted)}
     .pub{margin:10px 0; padding:14px; border-radius:14px; border:1px solid var(--line)}
-    .chips .chip{display:inline-block; padding:4px 8px; border-radius:999px; background:var(--chip); border:1px solid var(--line); font-size:11px; color:var(--muted)}
     footer{margin:50px 0; color:var(--muted); display:flex; align-items:center; justify-content:space-between}
-    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .edu{grid-template-columns:1fr} .edu .right{text-align:left} nav{display:none} }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .edu{grid-template-columns:1fr} .edu .right{text-align:left} nav{flex-wrap:wrap; justify-content:center;} }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a class="brand" href="#">
-        <div class="avatar" aria-hidden="true">VP</div>
+      <div class="brand">
+        <div class="avatar"><img src="images/profile.jpg" alt="Vardhan Palod photo"></div>
         <div>
           <div style="font-weight:900; font-size:18px">Vardhan Palod</div>
           <div class="mono">PhD Student • CS @ ASU</div>
         </div>
-      </a>
-      <div class="row">
+      </div>
+      <div class="header-right">
         <nav aria-label="Primary">
           <a href="#about">About</a>
           <a href="#education">Education</a>
