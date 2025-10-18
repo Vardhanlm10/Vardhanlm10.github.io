@@ -29,11 +29,11 @@
     .header-right{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
     .hero{display:grid; grid-template-columns:.8fr 1.2fr; gap:24px; align-items:start; background:linear-gradient(180deg, rgba(255,255,255,.06), transparent); border:1px solid var(--line); border-radius:20px; padding:24px}
     
-    /* === CHANGED === Increased image size */
+    /* === CHANGED === Image bigger and square */
     .hero-image {
-      width: 150px; /* Was 120px */
-      height: 150px; /* Was 120px */
-      border-radius: 50%; 
+      width: 180px;  /* Increased size */
+      height: 180px; /* Increased size */
+      border-radius: 18px; /* Changed to rounded square */
       object-fit: cover;
       margin-bottom: 12px;
       border: 1px solid var(--line);
@@ -64,8 +64,8 @@
     <header>
       <div class="brand">
         <div>
-          <div style="font-weight:900; font-size:18px">Vardhan Palod [cite: 1]</div>
-          <div class="mono">PhD Student • CS @ ASU [cite: 11]</div>
+          <div style="font-weight:900; font-size:18px">Vardhan Palod</div>
+          <div class="mono">PhD Student • CS @ ASU</div>
         </div>
       </div>
       <div class="header-right">
@@ -87,21 +87,19 @@
         <img src="images/profile.jpg" alt="Vardhan Palod photo" class="hero-image">
         <div class="kicker">Contact</div>
         <p>
-          <a href="mailto:vpalod@asu.edu">vpalod@asu.edu</a> [cite: 5]<br/>
+          <a href="mailto:vpalod@asu.edu">vpalod@asu.edu</a><br/>
           <a href="https://linkedin.com/in/vardhan-palod/" target="_blank" rel="noopener">LinkedIn</a> ·
-          <a href="https://github.com/vardhanlm10" target="_blank" rel="noopener">GitHub</a> [cite: 6]
+          <a href="https://github.com/vardhanlm10" target="_blank" rel="noopener">GitHub</a>
         </p>
-        <p class="mono">Tempe, AZ [cite: 2]</p>
+        <p class="mono">Tempe, AZ</p>
       </div>
       
       <div>
         <div class="kicker">Research Objective</div>
         <h1>Language models, reasoning, and human‑AI teaming</h1>
-        
         <p>
-          My current research focuses on understanding and enhancing the reasoning abilities of <strong>Large Language Models (LLMs)</strong>[cite: 7]. In particular, my work explores: (i) the semantic properties and underlying causes of performance improvements arising from the use of <em>intermediate tokens</em> in language models, and (ii) the effects of <strong>reinforcement learning</strong> on task performance and the interpretability of intermediate reasoning processes[cite: 8]. Additionally, I am actively developing robust and scalable frameworks to enable effective and trustworthy <strong>Human‑AI collaboration</strong>[cite: 9].
+          My current research focuses on understanding and enhancing the reasoning abilities of <strong>Large Language Models (LLMs)</strong>. In particular, my work explores: (i) the semantic properties and underlying causes of performance improvements arising from the use of <em>intermediate tokens</em> in language models, and (ii) the effects of <strong>reinforcement learning</strong> on task performance and the interpretability of intermediate reasoning processes. Additionally, I am actively developing robust and scalable frameworks to enable effective and trustworthy <strong>Human‑AI collaboration</strong>.
         </p>
-
         <div class="row chips">
           <span class="chip">LLMs & Reasoning</span>
           <span class="chip">Intermediate Tokens</span>
@@ -112,30 +110,30 @@
     </section>
 
     <section id="education">
-      <h2>Education [cite: 10]</h2>
+      <h2>Education</h2>
       <div class="card">
         <div class="edu">
           <div>
-            <strong>Arizona State University</strong> — PhD in Computer Science [cite: 11]
-            <div class="mono">Advisor: Prof. Subbarao Kambhampati · GPA: 4.0/4.0 [cite: 11, 15]</div>
+            <strong>Arizona State University</strong> — PhD in Computer Science
+            <div class="mono">Advisor: Prof. Subbarao Kambhampati · GPA: 4.0/4.0</div>
           </div>
-          <div class="right">Aug 2025 – May 2030 (Expected) [cite: 15]</div>
+          <div class="right">Aug 2025 – May 2030 (Expected)</div>
         </div>
         <hr style="border:none; border-top:1px solid var(--line); margin:12px 0"/>
         <div class="edu">
           <div>
-            <strong>Arizona State University</strong> — M.S. in Computer Science [cite: 11]
-            <div class="mono">Advisor: Prof. Subbarao Kambhampati · Converted to PhD · GPA: 4.0/4.0 [cite: 11, 17]</div>
+            <strong>Arizona State University</strong> — M.S. in Computer Science
+            <div class="mono">Advisor: Prof. Subbarao Kambhampati · Converted to PhD · GPA: 4.0/4.0</div>
           </div>
-          <div class="right">Aug 2024 – May 2025 [cite: 16]</div>
+          <div class="right">Aug 2024 – May 2025</div>
         </div>
         <hr style="border:none; border-top:1px solid var(--line); margin:12px 0"/>
         <div class="edu">
           <div>
-            <strong>BITS Pilani, K.K. Birla Goa Campus</strong> — B.E. in Computer Science (Minor: Data Science) [cite: 12]
-            <div class="mono">CGPA: 8.56/10 [cite: 19]</div>
+            <strong>BITS Pilani, K.K. Birla Goa Campus</strong> — B.E. in Computer Science (Minor: Data Science)
+            <div class="mono">CGPA: 8.56/10</div>
           </div>
-          <div class="right">Aug 2020 – May 2024 [cite: 18]</div>
+          <div class="right">Aug 2020 – May 2024</div>
         </div>
       </div>
     </section>
@@ -145,73 +143,73 @@
       <div class="grid">
         <article class="card">
           <div class="row" style="justify-content:space-between">
-            <strong>Graduate Research Associate</strong> [cite: 13]
-            <span class="mono">Jan 2025 – Present [cite: 20]</span>
+            <strong>Graduate Research Associate</strong>
+            <span class="mono">Jan 2025 – Present</span>
           </div>
-          <div class="mono">School of Computing & AI, Arizona State University · Mentor: Prof. Subbarao Kambhampati [cite: 13, 14]</div>
+          <div class="mono">School of Computing & AI, Arizona State University · Mentor: Prof. Subbarao Kambhampati</div>
           <ul>
-            <li>Investigating reasoning abilities via fine‑tuning and RL‑based training of LLMs[cite: 21].</li>
-            <li>Developing constructive applications where LLMs complement robust planners from AI Planning[cite: 21].</li>
+            <li>Investigating reasoning abilities via fine‑tuning and RL‑based training of LLMs.</li>
+            <li>Developing constructive applications where LLMs complement robust planners from AI Planning.</li>
           </ul>
         </article>
         <article class="card">
           <div class="row" style="justify-content:space-between">
-            <strong>Master’s Opportunity for Research in Engineering (MORE)</strong> [cite: 22]
-            <span class="mono">Jan 2025 – May 2025 [cite: 24]</span>
+            <strong>Master’s Opportunity for Research in Engineering (MORE)</strong>
+            <span class="mono">Jan 2025 – May 2025</span>
           </div>
-          <div class="mono">Arizona State University · Mentor: Dr. Heewook Lee [cite: 22, 23]</div>
+          <div class="mono">Arizona State University · Mentor: Dr. Heewook Lee</div>
           <ul>
-            <li>Fine‑tuned <strong>RITA</strong> (protein LM) to generate candidate TCR sequences for epitopes with no known binders[cite: 25].</li>
-            <li>Produced high‑quality TCRs with strong predicted binding affinity, indicating potential for novel immunotherapies[cite: 26].</li>
+            <li>Fine‑tuned <strong>RITA</strong> (protein LM) to generate candidate TCR sequences for epitopes with no known binders.</li>
+            <li>Produced high‑quality TCRs with strong predicted binding affinity, indicating potential for novel immunotherapies.</li>
           </ul>
         </article>
       </div>
     </section>
 
     <section id="publications">
-      <h2>Selected Publications [cite: 27]</h2>
+      <h2>Selected Publications</h2>
       <div class="card">
         <div class="pub">
-          <strong>Kaya Stechly*, Karthik Valmeekam*, <u>Vardhan Palod*</u>, Atharva Gundawar*, Subbarao Kambhampati.</strong> [cite: 29]
-          <div><em><a href="https://arxiv.org/abs/2505.13775" target="_blank" rel="noopener">Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens</a>.</em> </div>
-          <div class="mono">NeurIPS 2025 — Foundations of Reasoning in Language Models Workshop[cite: 30]; Bridging Language, Agent, and World Models (LAW) Workshop[cite: 31]. <span class="chips"><span class="chip">Equal contribution [cite: 29]</span></span></div>
+          <strong>Kaya Stechly*, Karthik Valmeekam*, <u>Vardhan Palod*</u>, Atharva Gundawar*, Subbarao Kambhampati.</strong>
+          <div><em><a href="https://arxiv.org/abs/2505.13775" target="_blank" rel="noopener">Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens</a>.</em></div>
+          <div class="mono">NeurIPS 2025 — Foundations of Reasoning in Language Models Workshop; Bridging Language, Agent, and World Models (LAW) Workshop. <span class="chips"><span class="chip">Equal contribution</span></span></div>
         </div>
         <div class="pub">
-          <strong>Vardhan Palod, Karthik Valmeekam, Kaya Stechly, Subbarao Kambhampati.</strong> [cite: 32]
-          <div><em><a href="https://arxiv.org/abs/2509.07339" target="_blank" rel="noopener">Performative Thinking? The Brittle Correlation Between CoT Length and Problem Complexity</a>.</em> [cite: 32]</div>
-          <div class="mono">NeurIPS 2025 — Workshop on Efficient Reasoning. [cite: 33]</div>
+          <strong>Vardhan Palod, Karthik Valmeekam, Kaya Stechly, Subbarao Kambhampati.</strong>
+          <div><em><a href="https://arxiv.org/abs/2509.07339" target="_blank" rel="noopener">Performative Thinking? The Brittle Correlation Between CoT Length and Problem Complexity</a>.</em></div>
+          <div class="mono">NeurIPS 2025 — Workshop on Efficient Reasoning.</div>
         </div>
         <div class="pub">
-          <strong>Upasana Biswas, Vardhan Palod, Siddhant Bhambri, Subbarao Kambhampati.</strong> [cite: 35]
-          <div><em><a href="https://openreview.net/forum?id=uQ09AYZB4w" target="_blank" rel="noopener">Who is Helping Whom? Analyzing Inter‑dependencies to Evaluate Cooperation in Human‑AI Teaming</a>.</em> [cite: 34]</div>
-          <div class="mono">Second Coordination & Cooperation in Multi‑Agent Reinforcement Learning Workshop (2025). [cite: 36]</div>
+          <strong>Upasana Biswas, Vardhan Palod, Siddhant Bhambri, Subbarao Kambhampati.</strong>
+          <div><em><a href="https://openreview.net/forum?id=uQ09AYZB4w" target="_blank" rel="noopener">Who is Helping Whom? Analyzing Inter‑dependencies to Evaluate Cooperation in Human‑AI Teaming</a>.</em></div>
+          <div class="mono">Second Coordination & Cooperation in Multi‑Agent Reinforcement Learning Workshop (2025).</div>
         </div>
         <div class="pub">
-          <strong>Subbarao Kambhampati, Kaya Stechly, Karthik Valmeekam, Lucas Saldyt, Siddhant Bhambri, Vardhan Palod, Atharva Gundawar, Soumya Rani Samineni, Durgesh Kalwar, Upasana Biswas.</strong> [cite: 38]
-          <div><em><a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!</a></em> [cite: 37]</div>
-          <div class="mono">NeurIPS 2025 — LAW Workshop[cite: 39]; Interpreting Cognition in Deep Learning Models (CogInterp) Workshop[cite: 40].</div>
+          <strong>Subbarao Kambhampati, Kaya Stechly, Karthik Valmeekam, Lucas Saldyt, Siddhant Bhambri, Vardhan Palod, Atharva Gundawar, Soumya Rani Samineni, Durgesh Kalwar, Upasana Biswas.</strong>
+          <div><em><a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!</a></em></div>
+          <div class="mono">NeurIPS 2025 — LAW Workshop; Interpreting Cognition in Deep Learning Models (CogInterp) Workshop.</div>
         </div>
         <div class="pub">
-          <strong>Vardhan Palod, Pranav Mahajan, Veeky Baths, Boris S. Gutkin.</strong> [cite: 41]
-          <div><em><a href="https://openreview.net/forum?id=NKfEkpsIxa" target="_blank" rel="noopener">Discounting and Drug Seeking in Biological Hierarchical Reinforcement Learning</a>.</em> [cite: 41]</div>
-          <div class="mono">CCN 2025 (Computational Cognitive Neuroscience Conference). [cite: 42]</div>
+          <strong>Vardhan Palod, Pranav Mahajan, Veeky Baths, Boris S. Gutkin.</strong>
+          <div><em><a href="https://openreview.net/forum?id=NKfEkpsIxa" target="_blank" rel="noopener">Discounting and Drug Seeking in Biological Hierarchical Reinforcement Learning</a>.</em></div>
+          <div class="mono">CCN 2025 (Computational Cognitive Neuroscience Conference).</div>
         </div>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Notable Research Projects [cite: 43]</h2>
+      <h2>Notable Research Projects</h2>
       <div class="grid">
         <article class="card">
-          <div class="kicker">Inference‑time Scaling [cite: 44]</div>
-          <h3 style="margin-top:6px">Rollout‑based strategic lookahead for reasoning [cite: 45]</h3>
-          <p>Designed a rollout method that performs strategic lookahead before committing to next actions in reasoning tasks (Game of 24), achieving <strong>70% accuracy</strong> versus a <strong>21% baseline</strong> with GPT‑4o‑mini[cite: 45, 46].</p>
+          <div class="kicker">Inference‑time Scaling</div>
+          <h3 style="margin-top:6px">Rollout‑based strategic lookahead for reasoning</h3>
+          <p>Designed a rollout method that performs strategic lookahead before committing to next actions in reasoning tasks (Game of 24), achieving <strong>70% accuracy</strong> versus a <strong>21% baseline</strong> with GPT‑4o‑mini.</p>
           <div class="row chips"><span class="chip">Python</span><span class="chip">LLM</span><span class="chip">Search</span></div>
         </article>
         <article class="card">
-          <div class="kicker">World Models for RL [cite: 47]</div>
-          <h3 style="margin-top:6px">Leveraging LLMs to accelerate RL in Gridworld [cite: 49]</h3>
-          <p>Used Llama 3.1 to synthesize state‑action trajectories, enabling model‑free RL agents to converge up to <strong>50% faster</strong> and reduce unsafe exploration by up to <strong>75%</strong> relative to direct training in‑env[cite: 49].</p>
+          <div class="kicker">World Models for RL</div>
+          <h3 style="margin-top:6px">Leveraging LLMs to accelerate RL in Gridworld</h3>
+          <p>Used Llama 3.1 to synthesize state‑action trajectories, enabling model‑free RL agents to converge up to <strong>50% faster</strong> and reduce unsafe exploration by up to <strong>75%</strong> relative to direct training in‑env.</p>
           <div class="row chips"><span class="chip">Llama 3.1</span><span class="chip">RL</span><span class="chip">Simulation</span></div>
         </article>
       </div>
@@ -221,18 +219,18 @@
       <h2>Technical Strengths</h2>
       <div class="card">
         <div class="row chips" style="margin-bottom:10px">
-          <span class="chip">Python</span> [cite: 50]
-          <span class="chip">C/C++</span> [cite: 50]
-          <span class="chip">Java</span> [cite: 50]
-          <span class="chip">PDDL</span> [cite: 50]
-          <span class="chip">PyTorch</span> [cite: 51]
-          <span class="chip">HuggingFace</span> [cite: 51]
-          <span class="chip">VERL (GRPO, FSDP SFT)</span> [cite: 51]
-          <span class="chip">Docker</span> [cite: 51]
-          <span class="chip">Kubernetes</span> [cite: 51]
-          <span class="chip">Scikit‑learn</span> [cite: 51]
-          <span class="chip">NumPy</span> [cite: 51]
-          <span class="chip">Pandas</span> [cite: 51]
+          <span class="chip">Python</span>
+          <span class="chip">C/C++</span>
+          <span class="chip">Java</span>
+          <span class="chip">PDDL</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">HuggingFace</span>
+          <span class="chip">VERL (GRPO, FSDP SFT)</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Scikit‑learn</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Pandas</span>
         </div>
         <p class="mono">Always happy to share code and experimental setups upon request.</p>
       </div>
@@ -241,15 +239,15 @@
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p><strong>Email:</strong> <a href="mailto:vpalod@asu.edu">vpalod@asu.edu</a> [cite: 5]<br/>
-        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vardhan-palod/" target="_blank" rel="noopener">linkedin.com/in/vardhan-palod/</a> [cite: 6]<br/>
-        <strong>GitHub:</strong> <a href="https://github.com/vardhanlm10" target="_blank" rel="noopener">github.com/vardhanlm10</a> [cite: 6]<br/>
-        <strong>Location:</strong> Tempe, AZ [cite: 2]</p>
+        <p><strong>Email:</strong> <a href="mailto:vpalod@asu.edu">vpalod@asu.edu</a><br/>
+        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vardhan-palod/" target="_blank" rel="noopener">linkedin.com/in/vardhan-palod/</a><br/>
+        <strong>GitHub:</strong> <a href="https://github.com/vardhanlm10" target="_blank" rel="noopener">github.com/vardhanlm10</a><br/>
+        <strong>Location:</strong> Tempe, AZ</p>
       </div>
     </section>
 
     <footer>
-      <div>© <span id="year"></span> Vardhan Palod [cite: 1]</div>
+      <div>© <span id="year"></span> Vardhan Palod</div>
       <div class="mono">Built with GitHub Pages</div>
     </footer>
   </div>
