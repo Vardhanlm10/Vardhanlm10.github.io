@@ -59,6 +59,10 @@
     .pub-authors{margin-bottom:8px}
     .pub-venue{margin-bottom:8px}
     .pub-coverage{margin-bottom:8px}
+    .publications-list{list-style:none; padding-left:0; margin:0}
+    .publications-list li{counter-increment: publication-counter; position:relative; margin:10px 0; padding:14px; border-radius:14px; border:1px solid var(--line)}
+    .publications-list li::before{content:counter(publication-counter) "."; position:absolute; left:-20px; font-weight:bold; color:var(--brand)}
+    .publications-list{counter-reset: publication-counter}
     footer{margin:50px 0; color:var(--muted); display:flex; align-items:center; justify-content:space-between}
     @media (max-width:900px){ .hero{grid-template-columns:1fr; align-items:center;} .grid{grid-template-columns:1fr} .edu{grid-template-columns:1fr} .edu .right{text-align:left} nav{flex-wrap:wrap; justify-content:center;} }
   </style>
@@ -167,36 +171,38 @@
     <section id="publications">
       <h2>Publications</h2>
       <div class="card">
-        <div class="pub">
-          <div class="pub-title"><em><a href="https://arxiv.org/abs/2505.13775" target="_blank" rel="noopener">Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens</a>.</em></div>
-          <div class="pub-authors"><strong>Kaya Stechly*, Karthik Valmeekam*, <u>Vardhan Palod*</u>, Atharva Gundawar*, Subbarao Kambhampati.</strong></div>
-          <div class="pub-venue">NeurIPS 2025 — Foundations of Reasoning in Language Models Workshop; Bridging Language, Agent, and World Models (LAW) Workshop. <span class="chips"><span class="chip">Equal contribution</span></span></div>
-          <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
-        </div>
-        <div class="pub">
-          <div class="pub-title"><em><a href="https://arxiv.org/abs/2509.07339" target="_blank" rel="noopener">Performative Thinking? The Brittle Correlation Between CoT Length and Problem Complexity</a>.</em></div>
-          <div class="pub-authors"><strong>Vardhan Palod, Karthik Valmeekam, Kaya Stechly, Subbarao Kambhampati.</strong></div>
-          <div class="pub-venue">NeurIPS 2025 — Workshop on Efficient Reasoning.</div>
-          <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
-        </div>
-        <div class="pub">
-          <div class="pub-title"><em><a href="https://openreview.net/forum?id=uQ09AYZB4w" target="_blank" rel="noopener">Who is Helping Whom? Analyzing Inter‑dependencies to Evaluate Cooperation in Human‑AI Teaming</a>.</em></div>
-          <div class="pub-authors"><strong>Upasana Biswas, Vardhan Palod, Siddhant Bhambri, Subbarao Kambhampati.</strong></div>
-          <div class="pub-venue">Second Coordination & Cooperation in Multi‑Agent Reinforcement Learning Workshop (2025).</div>
-          <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
-        </div>
-        <div class="pub">
-          <div class="pub-title"><em><a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!</a></em></div>
-          <div class="pub-authors"><strong>Subbarao Kambhampati, Kaya Stechly, Karthik Valmeekam, Lucas Saldyt, Siddhant Bhambri, Vardhan Palod, Atharva Gundawar, Soumya Rani Samineni, Durgesh Kalwar, Upasana Biswas.</strong></div>
-          <div class="pub-venue">NeurIPS 2025 — LAW Workshop; Interpreting Cognition in Deep Learning Models (CogInterp) Workshop.</div>
-          <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
-        </div>
-        <div class="pub">
-          <div class="pub-title"><em><a href="https://openreview.net/forum?id=NKfEkpsIxa" target="_blank" rel="noopener">Discounting and Drug Seeking in Biological Hierarchical Reinforcement Learning</a>.</em></div>
-          <div class="pub-authors"><strong>Vardhan Palod, Pranav Mahajan, Veeky Baths, Boris S. Gutkin.</strong></div>
-          <div class="pub-venue">CCN 2025 (Computational Cognitive Neuroscience Conference).</div>
-          <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
-        </div>
+        <ol class="publications-list">
+          <li>
+            <div class="pub-title"><em><a href="https://arxiv.org/abs/2505.13775" target="_blank" rel="noopener">Beyond semantics: The unreasonable effectiveness of reasonless intermediate tokens</a>.</em></div>
+            <div class="pub-authors"><strong>Kaya Stechly*, Karthik Valmeekam*, <u>Vardhan Palod*</u>, Atharva Gundawar*, Subbarao Kambhampati.</strong></div>
+            <div class="pub-venue">NeurIPS 2025 — Foundations of Reasoning in Language Models Workshop; Bridging Language, Agent, and World Models (LAW) Workshop. <span class="chips"><span class="chip">Equal contribution</span></span></div>
+            <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
+          </li>
+          <li>
+            <div class="pub-title"><em><a href="https://arxiv.org/abs/2509.07339" target="_blank" rel="noopener">Performative Thinking? The Brittle Correlation Between CoT Length and Problem Complexity</a>.</em></div>
+            <div class="pub-authors"><strong>Vardhan Palod, Karthik Valmeekam, Kaya Stechly, Subbarao Kambhampati.</strong></div>
+            <div class="pub-venue">NeurIPS 2025 — Workshop on Efficient Reasoning.</div>
+            <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
+          </li>
+          <li>
+            <div class="pub-title"><em><a href="https://openreview.net/forum?id=uQ09AYZB4w" target="_blank" rel="noopener">Who is Helping Whom? Analyzing Inter‑dependencies to Evaluate Cooperation in Human‑AI Teaming</a>.</em></div>
+            <div class="pub-authors"><strong>Upasana Biswas, Vardhan Palod, Siddhant Bhambri, Subbarao Kambhampati.</strong></div>
+            <div class="pub-venue">Second Coordination & Cooperation in Multi‑Agent Reinforcement Learning Workshop (2025).</div>
+            <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
+          </li>
+          <li>
+            <div class="pub-title"><em><a href="https://arxiv.org/abs/2504.09762" target="_blank" rel="noopener">Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!</a></em></div>
+            <div class="pub-authors"><strong>Subbarao Kambhampati, Kaya Stechly, Karthik Valmeekam, Lucas Saldyt, Siddhant Bhambri, Vardhan Palod, Atharva Gundawar, Soumya Rani Samineni, Durgesh Kalwar, Upasana Biswas.</strong></div>
+            <div class="pub-venue">NeurIPS 2025 — LAW Workshop; Interpreting Cognition in Deep Learning Models (CogInterp) Workshop.</div>
+            <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
+          </li>
+          <li>
+            <div class="pub-title"><em><a href="https://openreview.net/forum?id=NKfEkpsIxa" target="_blank" rel="noopener">Discounting and Drug Seeking in Biological Hierarchical Reinforcement Learning</a>.</em></div>
+            <div class="pub-authors"><strong>Vardhan Palod, Pranav Mahajan, Veeky Baths, Boris S. Gutkin.</strong></div>
+            <div class="pub-venue">CCN 2025 (Computational Cognitive Neuroscience Conference).</div>
+            <div class="pub-coverage">Media Coverage: [Add coverage details here]</div>
+          </li>
+        </ol>
       </div>
     </section>
 
